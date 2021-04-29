@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,700;1,200&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/c5978c8411.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="estilos.css">
+	<title>Portfolio de fotografía - Rodrigo Luna</title>
+</head>
+<body>
+	
+	<div class="contenedor">
+		<header>
+			<button class="switch" id="switch">
+				<span><i class="fas fa-sun"></i></span>
+				<span><i class="fas fa-moon"></i></span>
+			</button>
+			<div class="logo">
+				<h1 class="titulo">
+					<a href="index.html">DIEGO LUNA</a>
+				</h1>
+				<h2 class="subtitulo">Fotógrafo & retocador digital</h2>
+			</div>
+			<form action="">
+				<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+			</form>
+			<div class="categorias" id="categorias">
+				<a href="#" class="activo">Todas</a>
+				<a href="#">Fashion</a>
+				<a href="#">Beauty</a>
+				<a href="#">Publicitario</a>
+				<a href="#">Catalogo</a>
+			</div>
+		</header>
+
+		<section class="grid" id="grid">
+			<div class="item" 
+				data-categoria="beauty"
+				data-etiquetas="mujer mujeres belleza retrato"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/beauty/72dpi_recortadas/beauty1.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img1</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$45.50</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="fashion"
+				data-etiquetas="mujer mujeres moda"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/fashion/72dpi_recortadas/fashion11.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img2</h3>					
+				</div>
+				<div>
+					<h4 class="item-precio">$56.72</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="catalogo"
+				data-etiquetas="mujer mujeres catalogo"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/catalogue/72dpi_recortada/catal8.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img3</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$32.16</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="publicitario"
+				data-etiquetas="producto makeup maquillaje"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/advertising/72dpi_recortadas/adver4.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img4</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$52.18</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="publicitario"
+				data-etiquetas="producto comida alimento"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/advertising/72dpi_recortadas/adver18.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img5</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$42.17</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="fashion"
+				data-etiquetas="mujer mujeres moda"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/fashion/72dpi_recortadas/fashion19.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img6</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$51.89</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="beauty"
+				data-etiquetas="mujer mujeres belleza retrato"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/beauty/72dpi_recortadas/beauty21.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img7</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$60.14</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item" 
+				data-categoria="fashion"
+				data-etiquetas="mujer mujeres moda"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/fashion/72dpi_recortadas/fashion18.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img8</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$64.19</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="publicitario"
+				data-etiquetas="producto makeup maquillaje"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/advertising/72dpi_recortadas/adver7.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img9</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$57.23</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="publicitario"
+				data-etiquetas="producto comida alimento"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/advertising/72dpi_recortadas/adver24.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img10</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$59.32</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="catalogo"
+				data-etiquetas="mujer mujeres catalogo"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/catalogue/72dpi_recortada/catal2.jpg"class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img11</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$39.89</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="fashion"
+				data-etiquetas="mujer mujeres moda"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/fashion/72dpi_recortadas/fashion6.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img12</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$42.18</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="beauty"
+				data-etiquetas="mujer mujeres belleza retrato"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/beauty/72dpi_recortadas/beauty19.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img13</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$30.29</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="publicitario"
+				data-etiquetas="producto comida alimento"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/advertising/72dpi_recortadas/adver22.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img14</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$37.77</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="publicitario"
+				data-etiquetas="producto makeup maquillaje"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/advertising/72dpi_recortadas/adver5.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img15</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$39.64</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="catalogo"
+				data-etiquetas="mujer mujeres catalogo"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/catalogue/72dpi_recortada/catal23.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img16</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$52.14</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="beauty"
+				data-etiquetas="mujer mujeres belleza retrato"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/beauty/72dpi_recortadas/beauty9.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img17</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$55.55</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="catalogo"
+				data-etiquetas="hombre catalogo"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/catalogue/72dpi_recortada/catal14.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img18</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$62.17</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="fashion"
+				data-etiquetas="mujer mujeres moda"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/fashion/72dpi_recortadas/fashion12.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img19</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$66.33</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="beauty"
+				data-etiquetas="mujer mujeres belleza retrato"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/beauty/72dpi_recortadas/beauty24.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img20</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$61.32</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="catalogo"
+				data-etiquetas="hombre catalogo"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/catalogue/72dpi_recortada/catal12.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img21</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$58.42</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="fashion"
+				data-etiquetas="mujer mujeres moda"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/fashion/72dpi_recortadas/fashion21.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img22</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$32.33</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="beauty"
+				data-etiquetas="mujer mujeres belleza retrato"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/beauty/72dpi_recortadas/beauty8.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img23</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$31.67</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+
+			<div class="item"
+				data-categoria="catalogo"
+				data-etiquetas="mujer mujeres catalogo"
+				data-boton="Comprar!">
+				<div class="item-contenido">
+					<img src="images/catalogue/72dpi_recortada/catal7.jpg" class="item-imagen imgGrid" alt="">
+					<h3 class="item-titulo">img24</h3>
+				</div>
+				<div>
+					<h4 class="item-precio">$33.66</h4>
+					<button class="item-boton btn btn-primary botonComprar">AÑADIR AL CARRITO</button>
+				</div>
+			</div>
+		</section>	
+
+		<section class="overlay" id="overlay">
+			<div class="contenedor-img">
+				<button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+				<img src="" alt="">
+			</div>
+			<button class="boton"></button>
+		</section>
+
+<!-- COMIENZA SECCIÓN CARRITO DE COMPRAS -->
+
+		<section class="shopping-cart">
+			<div class="container">
+				<h1 class="text-center">CARRITO</h1>
+				<hr>
+				<div class="row">
+					<div class="col-6">
+						<div class="shopping-cart-header">
+							<h6>Producto</h6>
+						</div>
+					</div>
+					<div class="col-2">
+						<div class="shopping-cart-header">
+							<h6 class="text-truncate">Precio</h6>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="shopping-cart-header">
+							<h6>Cantidad</h6>
+						</div>
+					</div>
+				</div>
+
+
+		<!-- Comienzo el contenedor que agrupa los items clickeados -->
+			
+				<div class="shopping-cart-items shoppingCartItemsContainer">
+				</div>
+
+		<!--Finalizo el contenedor que agrupa los items clickeados -->
+	
+				<!-- SECCIÓN TOTAL -->
+				<div class="row">
+					<div class="col-12">
+						<div class="shopping-cart-total d-flex align-items-center">
+							<p class="mb-0">Total</p>
+							<p class="ml-4 mb-0 shoppingCartTotal">$0</p>
+							<div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+								data-delay="2000">
+								<div class="toast-header">
+									<span>✅</span>
+									<strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+									<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="toast-body text-white">
+									Se aumentó correctamente la cantidad
+								</div>
+							</div>
+							<button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+								data-target="#comprarModal">Comprar</button>
+						</div>
+					</div>
+				</div>
+	
+				<!-- FIN TOTAL -->
+	
+				<!--MODAL COMPRA -->
+				<div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>Pronto recibirá su pedido</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div><!-- FIN MODAL COMPRA -->
+			</div>	
+		</section>
+		<!-- FIN SECCIÓN CARRITO DE COMPRAS -->
+
+		<footer class="contenedor">
+			<div class="redes-sociales">
+				<div class="contenedor-icono">
+					<a href="" target="_blank" class="twitter">
+						<i class="fab fa-tumblr"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="" target="_blank" class="facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="" target="_blank" class="instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- ESTOY USANDO BIBLIOTECA MUURI PARA EL GRID DE IMAGENES -->
+	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+	<script src="tienda.js"></script>
+</body>
+</html>
