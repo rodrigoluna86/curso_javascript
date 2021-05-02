@@ -7,8 +7,8 @@ arrayDeBotonesDeCompra.forEach((botonDeCompra) => {
 const comprarButton = document.querySelector('.comprarButton');
 comprarButton.addEventListener('click', comprarButtonClicked);
 
-const shoppingCartItemsContainer = document.querySelector(
-  '.shoppingCartItemsContainer'
+const containerItemsCarrito = document.querySelector(
+  '.containerItemsCarrito'
 );
 
 function sumarAlCarritoClickeado(event) {
@@ -19,103 +19,102 @@ function sumarAlCarritoClickeado(event) {
   const itemPrice = item.querySelector('.item-precio').textContent;
   const itemImage = item.querySelector('.item-imagen').src;
 
-  addItemToShoppingCart(itemTitle, itemPrice, itemImage);
+  sumarItemAlCarrito(itemTitle, itemPrice, itemImage);
 }
 
-function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
-  const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
-    'shoppingCartItemTitle'
+function sumarItemAlCarrito(itemTitle, itemPrice, itemImage) {
+  const tituloDelElemento = containerItemsCarrito.getElementsByClassName(
+    'tituloItemCarrito'
   );
-  for (let i = 0; i < elementsTitle.length; i++) {
-    if (elementsTitle[i].innerText === itemTitle) {
-      let elementQuantity = elementsTitle[
+  for (let i = 0; i < tituloDelElemento.length; i++) {
+    if (tituloDelElemento[i].innerText === itemTitle) {
+      let cantidadElemento = tituloDelElemento[
         i
       ].parentElement.parentElement.parentElement.querySelector(
-        '.shoppingCartItemQuantity'
+        '.cantidadDeItemsCarrito'
       );
-      elementQuantity.value++;
+      cantidadElemento.value++;
       $('.toast').toast('show');
-      updateShoppingCartTotal();
+      actualizarTotalCarrito();
       return;
     }
   }
 
-  const shoppingCartRow = document.createElement('div');
-  const shoppingCartContent = `
-  <div class="row shoppingCartItem">
+  const filaCarrito = document.createElement('div');
+  const contenidoCarrito = `
+  <div class="row itemCarrito">
         <div class="col-6">
             <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
                 <img src=${itemImage} class="shopping-cart-image">
-                <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${itemTitle}</h6>
+                <h6 class="shopping-cart-item-title tituloItemCarrito text-truncate ml-3 mb-0">${itemTitle}</h6>
             </div>
         </div>
         <div class="col-2">
             <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-                <p class="item-precio mb-0 shoppingCartItemPrice">${itemPrice}</p>
+                <p class="item-precio mb-0 precioItemCarrito">${itemPrice}</p>
             </div>
         </div>
         <div class="col-4">
             <div
                 class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
-                <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                <input class="shopping-cart-quantity-input cantidadDeItemsCarrito" type="number"
                     value="1">
                 <button class="btn btn-danger buttonDelete" type="button">X</button>
             </div>
         </div>
     </div>`;
-  shoppingCartRow.innerHTML = shoppingCartContent;
-  shoppingCartItemsContainer.append(shoppingCartRow);
+    filaCarrito.innerHTML = contenidoCarrito;
+  containerItemsCarrito.append(filaCarrito);
 
-  shoppingCartRow
+  filaCarrito
     .querySelector('.buttonDelete')
     .addEventListener('click', quitarItemCarrito);
 
-  shoppingCartRow
-    .querySelector('.shoppingCartItemQuantity')
-    .addEventListener('change', quantityChanged);
+  filaCarrito
+    .querySelector('.cantidadDeItemsCarrito')
+    .addEventListener('change', cantidadModificada);
 
-  updateShoppingCartTotal();
+    actualizarTotalCarrito();
 }
 
-function updateShoppingCartTotal() {
+function actualizarTotalCarrito() {
   let total = 0;
-  const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
+  const totalCarritoDeCompras = document.querySelector('.totalCarritoDeCompras');
+  const itemsCarrito = document.querySelectorAll('.itemCarrito');
 
-  const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
-
-  shoppingCartItems.forEach((shoppingCartItem) => {
-    const shoppingCartItemPriceElement = shoppingCartItem.querySelector(
-      '.shoppingCartItemPrice'
+  itemsCarrito.forEach((itemCarrito) => {
+    const elementoPrecioCarrito = itemCarrito.querySelector(
+      '.precioItemCarrito'
     );
-    const shoppingCartItemPrice = Number(
-      shoppingCartItemPriceElement.textContent.replace('$', '')
+    const precioItemCarrito = Number(
+      elementoPrecioCarrito.textContent.replace('$', '')
     );
-    const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
-      '.shoppingCartItemQuantity'
+    const elementoCantidadItemCarrito = itemCarrito.querySelector(
+      '.cantidadDeItemsCarrito'
     );
     const shoppingCartItemQuantity = Number(
-      shoppingCartItemQuantityElement.value
+      elementoCantidadItemCarrito.value
     );
-    total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
+    total = total + precioItemCarrito * shoppingCartItemQuantity;
   });
-  shoppingCartTotal.innerHTML = `$ ${total.toFixed(2)}`;
+  totalCarritoDeCompras.innerHTML = `$ ${total.toFixed(2)}`;
 }
 
 function quitarItemCarrito(event) {
   const buttonClicked = event.target;
-  buttonClicked.closest('.shoppingCartItem').remove();
-  updateShoppingCartTotal();
+  buttonClicked.closest('.itemCarrito').remove();
+  actualizarTotalCarrito();
 }
 
-function quantityChanged(event) {
+function cantidadModificada(event) {
   const input = event.target;
   input.value <= 0 ? (input.value = 1) : null;
-  updateShoppingCartTotal();
+  actualizarTotalCarrito();
 }
 
 function comprarButtonClicked() {
-  shoppingCartItemsContainer.innerHTML = '';
-  updateShoppingCartTotal();
+  containerItemsCarrito.innerHTML = '';
+  actualizarTotalCarrito();
 }
 
 
