@@ -209,9 +209,13 @@ h4{
 	color: whitesmoke;
 }
 
-/*.shopping-cart-image{
-	height: auto;
-}*/
+.shopping-cart-image{
+	height: 8rem;
+}
+
+.modal-body p{
+	color: #243b55;
+}
 
 
 
